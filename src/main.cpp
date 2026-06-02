@@ -1,13 +1,14 @@
 #include <Arduino.h>
-// Simple test script to figure out if everything is working
-int buttonpin = 2;
+#include <WiFiS3.h>
+#include <arduino_secrets.h>
+// Simple test script to figure out if WiFi
+
 void setup() {
 // write your initialization code here
-    pinMode(buttonpin, INPUT_PULLUP);
     Serial.begin(9600);
 }
 
 void loop() {
 // write your code here
-    Serial.println(digitalRead(buttonpin));
+    Serial.println("HELLO WORLD");
 }
