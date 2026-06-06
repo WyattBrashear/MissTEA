@@ -15,14 +15,14 @@ void setup() {
 }
 
 void loop() {
-// write your code here
+    // write your code here
     Serial.print("Status: ");
-    Serial.print(analogRead(tempPot));
-    Serial.print(", ");
+    Serial.print(100 * analogRead(tempPot) / 1023);
+    Serial.print("%, ");
     Serial.print(analogRead(timePot));
     Serial.print(", ");
-    Serial.print(analogRead(speedPot));
-    Serial.print(", ");
+    Serial.print(100 * analogRead(speedPot) / 1023);
+    Serial.print("%, ");
     Serial.println(digitalRead(startButton));
     delay(100);
 }
